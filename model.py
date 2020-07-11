@@ -6,9 +6,9 @@ class Discriminator(nn.Module):
     def __init__(self, input_size, hidden_size):
         super().__init__()
         self.linear_1 = nn.Linear(input_size, hidden_size)
-        self.l_relu_1 = nn.ReLU(0.2)
+        self.l_relu_1 = nn.LeakyReLU(0.2)
         self.linear_2 = nn.Linear(hidden_size, hidden_size)
-        self.l_relu_2 = nn.ReLU(0.2)
+        self.l_relu_2 = nn.LeakyReLU(0.2)
         self.linear_3 = nn.Linear(hidden_size, 1)
         self.sigmoid = nn.Sigmoid()
 
