@@ -12,6 +12,7 @@ def train_generator(g_model, d_model, device, g_optimizer, loss_fn):
 
     g_optimizer.zero_grad()
     loss.backward()
+    g_optimizer.step()
     return loss
 
 
